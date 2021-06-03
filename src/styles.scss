@@ -1,0 +1,361 @@
+/**
+App
+ */
+* {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+.App,
+#root {
+  height: 100vh;
+}
+
+.App {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+}
+
+.mapHolder {
+  flex: 0 1 67%;
+  border: 3px solid #87ceeb;
+  border-top: 4px solid #87ceeb;
+  display: flex;
+
+}
+
+.mapHolderLoading {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.goldMarker {
+  //Make sure this is drawn over other markers
+  z-index: 9999 !important;
+}
+/**
+Map
+ */
+#map {
+  flex: 1;
+}
+
+.marker {
+  text-align:left;
+}
+
+.popUpMouseOver {
+  text-align: center;
+  font-size: 90%;
+}
+
+.popUpMouseOver > .subTextMarker {
+  font-size: 80%;
+}
+
+/*
+Linker deel
+ */
+ .headerInfo {
+  flex: 0 1 33%;
+  display: flex;
+  flex-direction: column;
+  
+}
+header::before {
+  background: #00889E;
+  display: block;
+}
+.header {
+  margin: 0 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-left: 5%;
+}
+header::after {
+  background: #00889E;
+  display: block;
+}
+.header > h4 {
+  color: black;
+}
+
+.header > img {
+  max-height: 3rem;
+  margin-left: 1%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+
+
+.headerEtc{
+  background-color: White;
+  flex-direction: column;
+}
+.searchBar{
+  display:flex;
+  justify-content: space-around;
+  margin-top: 1%;
+  outline: #00889E;
+}
+
+.infoContainer{
+  display:flex;
+  justify-content: space-around;
+}
+
+.apiContainer{
+  flex:0 1 45%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.apiContainer span {
+  font-weight: 500;
+  font-size: 90%;
+  flex:0 1 100%;
+  margin-left:2%;
+  margin-bottom:2.5%;
+}
+
+.apiContainer input{
+  width: 315px;
+  height:65%;
+  flex:0 1 auto;
+  margin-left:2%;
+}
+
+// .huisnummerContainer{
+//   flex:0 1 40%;
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .huisnummerContainer span {
+//   font-weight: 600;
+//   font-size: 110%;
+//   flex:0 1 100%;
+//   margin-left:5%;
+//   margin-bottom:2.5%;
+// }
+
+// .huisnummerContainer input {
+//   width:70%;
+//   height:75%;
+//   flex:0 1 auto;
+//   margin-left:5%;
+// }
+
+.searchBar button{
+  flex:0 1 10%;
+  height:65%;
+  margin-top: 6%;
+  margin-right: 6%;
+  background-color: #d5d8d8;
+  color:#f1f1f1;
+  border-width:1px;
+  border-color:#5f7070;
+  border-radius: 3px;
+  font-size: 105%;
+}
+
+.searchBar button:hover{
+  background-color: #0858eb;
+  color:#FFFFFF;
+  cursor:pointer;
+}
+
+.searchBar button:focus{
+  outline:none;
+
+}
+
+.startText{
+  display: flex;
+  justify-content: center;
+  font-size: 90%;
+  margin: 3% 3% 1% 4%;
+}
+
+.ldWizardLink {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0% 3% 1% 0%;
+  padding-left: 5%;
+}
+.help {
+  text-align: justify;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0% 3% 1% 0%;
+  padding-left: 5%;
+
+}
+
+ul {
+  padding: 0;
+}
+
+.badge {
+  display: inline-block;
+  margin-right: .6em;
+padding: .25em .4em;
+font-size: 75%;
+font-weight: 700;
+line-height: 1;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: .25rem;
+color: #fff;
+background-color: #6c757d;
+  a {
+    color: white;
+  }
+}
+.hoofdText {
+  font-size: 110%;
+  margin-bottom: 0%;
+}
+
+.subText {
+  font-size: 80%;
+}
+
+.objectScreen {
+  padding: 5%;
+}
+
+.objectScreen > h1 {
+  margin-bottom: 1%;
+}
+
+.objectScreen > h3 {
+  color: #2c84cb;
+  margin: 1% 0% 3%;
+}
+
+.namenTable {
+  margin-bottom: 2%;
+}
+
+.attributeSectionObjectScreen {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.attributeSectionObjectScreen td:last-child {
+  overflow-wrap: break-word;
+  width: 60%;
+}
+
+table {
+  word-break: break-word;
+}
+
+.dropDownItem * {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+}
+
+.cogIcon {
+  padding-left: 1%;
+  float: left;
+}
+
+.toast-background {
+  border-radius: 10px;
+  background: white;
+  color: black;
+}
+
+.toast-progress-bar {
+  background: skyblue;
+}
+
+
+.contextMenuContainer{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  z-index: 500;
+  background: white;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.contextMenuContainer > div > b {
+  font-size: 80%;
+}
+
+.contextMenuContainer > div > span {
+  font-size: 70%;
+}
+
+.contextMenuContainer > div{
+  white-space: nowrap;
+  display: block;
+  margin: 0;
+  padding : 10px 10px;
+  border-radius: 10px;
+
+  &:hover{
+    cursor: pointer;
+    padding: 9px 9px;
+    box-sizing: border-box;
+    border: #2c84cb 1px solid;
+  }
+}
+
+.properties-list {
+  padding: 0;
+  margin-top: 10%;
+  list-style-type: none;
+}
+.property {
+  position: relative;
+  margin-left: 30px;
+  padding: 5px 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 100ms ease-out;
+  
+  &::before {
+    content: ' ';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid;
+    border-radius: 3px;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+  }
+
+  //&:hover {
+  //  color: green;
+  //}
+
+  &.selected {
+    font-weight: bold;
+    opacity: 1;
+    &::before {
+      background: currentColor;
+    }
+  }
+}
